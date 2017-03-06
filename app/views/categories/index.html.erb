@@ -1,8 +1,12 @@
-<h1> Hello, <%= User.first.email %> </h1>
+
+<% if session[:user_id] %>
+  <%= User.find(session[:user_id]).email %>
+<% end  %>
+<h1> Hello, You! </h1>
 
 <div class="container">
 <ul><% @categories.each do |category| %>
-    <li><%= link_to category.name, articles_path(category) %></li>
+    <li><%= link_to category.name, category_articles_path(category) %></li>
     <% end  %>
 </ul>
 </div>

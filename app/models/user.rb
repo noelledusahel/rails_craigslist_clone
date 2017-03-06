@@ -1,8 +1,6 @@
 class User < ApplicationRecord
+  has_many :articles
 
-  has_many :articles, foreign_key: :author_id
-
-  validates_presence_of :email, :hashed_password
-
+  has_secure_password
 
 end
