@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Category.create!([{ name: :Cars},
+                  { name: :Boats},
+                  {name:  "Casual Encounters"}])
+
+User.create!([{email: "ryanklandgren", hashed_password: "password"}])
+
+Article.create! [
+  {title: "Old Dogs", body: "New Tricks!", price: 44, category_id: 1, author_id: 1},
+  {title: "Chicken Nuggets", body: "One Day Old Nuggets", price: 0, category_id: 2, author_id: 1},
+  {title: "I saw you on the subway", body: "you looked good!", price: 0, category_id: 3, author_id: 1}
+]
+
