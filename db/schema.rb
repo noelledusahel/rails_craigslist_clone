@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20170306155107) do
     t.string   "title",       null: false
     t.string   "body",        null: false
     t.string   "price",       null: false
-    t.integer  "author_id"
     t.integer  "category_id", null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -29,13 +28,6 @@ ActiveRecord::Schema.define(version: 20170306155107) do
     t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "email",           null: false
-    t.string   "hashed_password", null: false
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
   end
 
 end

@@ -1,7 +1,10 @@
 
 <h1><%= @article.title %></h1>
-<h3>~~ <%= @article.author.email %> ~~</h3>
+
 <p>$<%= @article.price %></p>
 <p> <%= @article.body %> </p>
+
+<%= link_to "Edit article", edit_category_article_path(@article.category, @article) %>
+<%= link_to "Delete article" , category_article_path, method: :delete %>
 
 

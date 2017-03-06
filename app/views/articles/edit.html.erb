@@ -1,7 +1,6 @@
-<h1> <%= @category.name  %> </h1>
+<h1>Edit yo shit</h1>
 
-
-<%= form_for :article, url: category_articles_path(@category) do |f|  %>
+<%= form_for :article, url: category_article_path(@category, @article), method: :patch do |f|  %>
 
 <p>
   <%= f.label :title %><br>
@@ -23,3 +22,5 @@
 </p>
 
 <% end  %>
+
+<%= link_to 'Back', category_articles_path(@category) %>
