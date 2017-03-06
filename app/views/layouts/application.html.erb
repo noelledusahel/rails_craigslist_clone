@@ -9,7 +9,11 @@
   </head>
 
   <body>
+
     <li style="list-style:none"> <%= link_to "Home", categories_path %> </li>
+    <li style="list-style:none"> <%= link_to "Log In", new_session_path %> </li>
+    <li style="list-style:none"> <%= link_to "Register", new_user_path %> </li>
+    <%= link_to "logout", '/sessions', method: :delete %> </li>
     <%= yield %>
   </body>
 </html>
